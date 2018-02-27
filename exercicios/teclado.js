@@ -1,7 +1,10 @@
-const env = require('../.env');
+const { getTelegram } = require('../utils/load');
 const Telegraf = require('telegraf');
 const Markup = require('telegraf/markup');
-const bot = new Telegraf(env.token);
+
+const config = getTelegram();
+
+const bot = new Telegraf(config.token);
 
 const tecladoCarne = Markup.keyboard([
   ['🐷 Porco', '🐮 Vaca', '🐑 Carneiro'],

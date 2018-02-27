@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":  "node exercicios/teclado",
+    "start": "node exercicios/teclado",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node exercicios/teclado"
   },
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "0.17.1",
+    "dotenv": "^5.0.1",
     "moment": "2.20.1",
     "telegraf": "^3.17.3"
   }
