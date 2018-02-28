@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node exercicios/teclado",
+    "start": "node projetos/ListaCompras/listaComprasMiddleware",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node exercicios/teclado"
+    "dev": "node projetos/ListaCompras/listaComprasMiddleware"
   },
   "keywords": [],
   "author": "",
