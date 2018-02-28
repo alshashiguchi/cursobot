@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node projetos/ListaCompras/listaComprasMiddleware",
+    "start": "node projetos/ListaCompras/listaComprasGrupo",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node projetos/ListaCompras/listaComprasMiddleware"
+    "dev": "node projetos/ListaCompras/listaComprasGrupo"
   },
   "keywords": [],
   "author": "",

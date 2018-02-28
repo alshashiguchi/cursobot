@@ -1,8 +1,10 @@
-const env = require('../../.env');
+const { getTelegram } = require('../../utils/load');
 const Telegraf = require('telegraf');
 const Extra = require('telegraf/extra');
 const Markup = require('telegraf/markup');
-const bot = new Telegraf(env.token);
+const config = getTelegram();
+console.log(config);
+const bot = new Telegraf(config.token);
 
 let dados = {};
 

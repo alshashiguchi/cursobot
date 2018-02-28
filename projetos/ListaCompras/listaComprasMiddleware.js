@@ -1,11 +1,9 @@
-const { getTelegram } = require('../../utils/load');
+const env = require('../../.env');
 const Telegraf = require('telegraf');
 const Extra = require('telegraf/extra');
 const Markup = require('telegraf/markup');
 const session = require('telegraf/session');
-const config = getTelegram();
-console.log(config);
-const bot = new Telegraf(config.token);
+const bot = new Telegraf(env.token);
 
 const gerarBotoes = lista => Extra.markup(
   Markup.inlineKeyboard(
