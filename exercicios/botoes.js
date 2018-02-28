@@ -1,12 +1,12 @@
 const env = require('../.env');
 const Telegraf = require('telegraf');
-const Extra = require('telgraf/extra');
+const Extra = require('telegraf/extra');
 const Markup = require('telegraf/markup');
 const bot = new Telegraf(env.token);
 
 let contagem = 0;
 
-const botoes = Extra.markup(Markup.inlineKeybord([
+const botoes = Extra.markup(Markup.inlineKeyboard([
   Markup.callbackButton('+1', 'add 1'),
   Markup.callbackButton('+10', 'add 10'),
   Markup.callbackButton('+100', 'add 100'),

@@ -8,8 +8,9 @@ let lista = [];
 
 const gerarBotoes = () => Extra.markup(
   Markup.inlineKeyboard(
-    lista.map(item => Markup.callbackButton(`delete ${item}`)),
-    {columns: 3}
+    lista.map(item => Markup.callbackButton(item, `delete ${item}`)), {
+      columns: 3
+    }
   )
 );
 

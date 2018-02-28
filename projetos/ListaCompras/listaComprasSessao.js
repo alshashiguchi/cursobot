@@ -7,8 +7,9 @@ const bot = new Telegraf(env.token);
 
 const gerarBotoes = lista => Extra.markup(
   Markup.inlineKeyboard(
-    lista.map(item => Markup.callbackButton(`delete ${item}`)),
-    {columns: 3}
+    lista.map(item => Markup.callbackButton(item, `delete ${item}`)), {
+      columns: 3
+    }
   )
 );
 
@@ -22,12 +23,14 @@ bot.start(async ctx => {
 });
 
 bot.on('text', ctx => {
-  ctx.session.lista.push(ctx.update.message.text);
-  ctx.reply(`${ctx.update.message.text} adicionado!`, gerarBotoes(ctx.session.lista));
+  let msg = ctx.update.message.text;
+  ctx.session.lista.push(msg);
+  ctx.reply(`${msg} adicionado!`, gerarBotoes(ctx.session.lista));
 });
 
 bot.action(/delete (.+)/, ctx => {
-  ctx.session.lista = ctx.session.lista.filter(item => item !== ctx.match[1]);
+  ctx.session.lista = ctx.session.lista.filter(
+    item => item !== ctx.match[1]);
   ctx.reply(`${ctx.match[1]} deletado!`, gerarBotoes(ctx.session.lista));
 });
 
